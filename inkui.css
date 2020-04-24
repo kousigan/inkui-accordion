@@ -1,0 +1,86 @@
+ details{
+     background: #253448;
+     margin:0;
+}
+details[open]{
+     padding-bottom: 10px;
+     border-bottom: 1px solid #465f80;
+}
+summary{
+     margin-bottom:0px;
+     padding:25px 20px 20px;
+     color: #b1c1ca;
+     display: block;
+     background:#1b2939;
+     position: sticky;
+     top:0;
+}
+ details[open] summary{
+   border-bottom: 1px solid #465f80;
+   margin-bottom: 10px;
+}
+ details p{
+     padding:0;
+     transition: all 0.2s ease-in;
+     transition-property: padding;
+     margin: 0;
+     color: #697e99;
+     font-size:0.875em;
+}
+ details[open] p{
+     padding:5px 20px;
+     transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+     transition-property: padding-top;
+}
+
+
+ details summary::before,details p::before{
+     content:"\ea54";
+     font-family: Lineicons;
+     padding-right:15px;
+     color:#697e99;
+}
+ details summary.active::before,details p.active::before{
+     content:"\ea1d";
+     font-family: Lineicons;
+     padding-right:15px;
+     
+}
+
+ details p.complete{
+     color: rgb(141, 253, 237);
+ }
+ details .complete::before{
+   color:rgb(141, 253, 237);
+ }
+ details p.active, details .active::before{
+     color: rgb(253, 141, 229);
+ }
+ details summary span{
+  position: absolute;
+   font-size: 0.65em;
+   text-transform:uppercase;
+    top:12px;
+    color:#999;
+    text-indent:3px;
+ }
+
+ summary i{
+   float:right;
+   font-style: normal;
+   opacity:0.5;
+   transition: all 0.2s ease-in;
+   color: #fff;
+ }
+  summary:hover i,details[open] summary i{
+    opacity:1;
+    transition: all 0.2s ease-in;
+  }
+ summary i::before{
+   content: "\ea27";
+   font-family: Lineicons;
+ }
+details[open] summary i::before{
+   content: "\ea22";
+   font-family: Lineicons;
+ }
